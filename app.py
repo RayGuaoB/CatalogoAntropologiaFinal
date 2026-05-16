@@ -152,12 +152,12 @@ if not df_filtrado.empty:
                 st.image(
                     img_path,
                     caption=datos_objeto["Denominación del Objeto"],
-                    use_container_width=True,
+                    use_column_width="always",
                 )
             else:
                 st.image(
                     "https://via.placeholder.com/300?text=Sin+Imagen",
-                    use_container_width=True,
+                    use_column_width="always",
                 )
 
         with col2:

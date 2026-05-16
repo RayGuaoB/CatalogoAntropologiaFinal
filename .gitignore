@@ -1,0 +1,20 @@
+# Credenciales - NUNCA subir al repositorio
+.streamlit/secrets.toml
+
+# Archivos de datos grandes
+LIBRODEREGISTRO.csv
+LIBRODEREGISTRO.xlsx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Scripts temporales
+check_db.py
+migrate_to_db.py
+remake.py
+where.py

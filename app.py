@@ -11,8 +11,15 @@ st.set_page_config(
 st.title("🏛️ Catálogo MUUA - Colección de Antropología")
 
 
+def get_db_url():
+    url = os.environ.get("DATABASE_URL")
+    if url:
+        return url
+    return st.secrets["database"]["url"]
+
+
 def query_db(sql, params=None):
-    conn = psycopg2.connect(st.secrets["database"]["url"])
+    conn = psycopg2.connect(get_db_url())
     try:
         cur = conn.cursor()
         cur.execute(sql, params)
